@@ -36,7 +36,6 @@ jobs:
         run: |
           cd workdir
           npm install
-          npm fund
           node claimer '${{ secrets.EMAIL }}' '${{ secrets.PASSWD }}' 0 '${{ secrets.SECRET }}' > games.info
 
       - name: Edit Games.info
